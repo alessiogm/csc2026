@@ -3,10 +3,13 @@
 cmake_minimum_required(VERSION 3.16)
 project(CSC2026_Exercises VERSION 1.0.0 LANGUAGES CXX)
 
-# C++20 standard
+# C++20 standard (use 23 if available for latest features)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+# Ensure include directory exists
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 # Export compile_commands.json for IDE support
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
